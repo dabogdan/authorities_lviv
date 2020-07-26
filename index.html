@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<!-- Map API -->
+  <!-- map styles & JS code -->
+   <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/> -->
+   <link rel="stylesheet" href="leaflet.css"/>
+    <script src="leaflet.js" ></script>
+  <!-- directions plugin -->
+  <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script> -->
+  <!-- <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' /> -->
+  <!-- <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script> -->
+  <!-- <link rel="stylesheet"
+  href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+  type="text/css"
+  /> -->
+
+</head>
+<body>
+  
+<!-- header -->
+<header class="header">
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <!-- dropdown -->
+    <div class="dropdown">
+      <a> Choose your <span style="color: #4de8de;"> district </span><span class="fa fa-caret-square-o-down"></span></a>
+        <div class="dropdown-content">
+          <a href="#Lviv Region">Lviv oblast</a>
+          <a href="#Lviv city">Lviv city</a>
+        </div>
+    </div>
+<!-- menu -->
+  <ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#careers">Feedback</a></li>
+    <li><a href="#contact">Contacts</a></li>
+  </ul>
+
+</header>
+<br>
+
+<!-- scrollig down container - map should stick to the left -->
+<div class="container">
+  <p class="center">Interactive Map of Institutions in <span style="color: #4de8de;">{JS code for rayon}</span></p>
+  
+  <article class="episode">
+    <!-- map -->
+    <div id="mapid" class="mapid" style="width: 100%; height: 30rem;"></div>
+    <!--  -->
+    <div class="episode__content">
+      <div class="description">
+        <div class="paragraph">
+        <!-- Lviv PPO -->
+          <a href="https://lviv.gp.gov.ua/ua/index.html" target="_blank" class="institution" onmouseover="ppoMarker.openPopup(); changeToPPO();"> Прокуратура Львівської області</a>
+          <p class="address"><span style="color: gray;">проспект Шевченка, 17-19, Львів, Львівська область, 79000</span></p>
+          <a href="https://goo.gl/maps/PFRD2X1bT3rkk3sAA" target="_blank" class="btn">Google Map</a>
+            <!-- <button class="btn" onclick="ppoMarker.openPopup()">показати на карті</button> <br> -->
+        </div>
+          <br>
+        <!-- Lviv SSU -->
+        <div class="paragraph">
+          <a href="https://ssu.gov.ua/contacts/upravlinnia" target="_blank" class="institution" onmouseover="ssuMarker.openPopup(); changeToSSU();"> УСБУ у Львівській області</a>
+          <p class="address"> <span style="color: gray;">79012, м. Львів, вул. Вітовського, 55</span></p>
+          <a href="https://goo.gl/maps/9viPhmGd5Do5LVMM8" target="_blank" class="btn">Google Map</a>
+            <!-- <button class="btn" onclick="ssuMarker.openPopup()">показати на карті</button> <br> -->
+        </div>
+        <br>  
+
+        <div class="paragraph">
+          <a href="https://www.npu.gov.ua/" target="_blank" class="institution" onmouseover="policeMarker.openPopup(); changeToPolice();"> ГУ НП у Львівській області</a>
+          <p class="address"><span style="color: gray;">площа Генерала Григоренка, 3, Львів, Львівська область, 79000</span></p>
+          <a href="https://goo.gl/maps/WndLT19ZhW4m9Hrp8" target="_blank" class="btn">Google Map</a>
+            <!-- <button class="btn" onclick="ssuMarker.openPopup()">показати на карті</button> <br> -->
+          </div>
+          <br>
+        
+        <div class="paragraph">
+          <a href="https://www.npu.gov.ua/" target="_blank" class="institution" onmouseover="ombudsmanMarker.openPopup(); changeToOmbudsman();"> Представник Уповноваженого Верховної Ради України з прав людини в західних областях</a>
+          <p class="address"><span style="color: gray;">вул. Винниченка, 18, м. Львів, 79000</span></p>
+          <a href="https://goo.gl/maps/6iFvP4qiBuF2" target="_blank" class="btn">Google Map</a>
+            <!-- <button class="btn" onclick="ssuMarker.openPopup()">показати на карті</button> <br> -->
+          </div>
+          <br>
+
+        <!-- Sample district -->
+        <div class="paragraph">
+          <a href="#" target="_blank" class="institution" onmouseover="marcusPolygon.openPopup()"> Зразок району </a>
+          <p class="address"><span style="color: gray;">Зразковий район міста Львова</span></p>
+          <a href="https://goo.gl/maps/CLf6iHG6xb9Q6edM8" target="_blank" class="btn">Google Map</a>
+            <!-- <button class="btn" onclick="marcusPolygon.openPopup()">показати на карті</button> <br> -->
+        </div>
+      </div>
+    </div>
+    <div class="whatWeDo" >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic fuga pariatur fugit ex cum ipsum autem reiciendis voluptatibus voluptas facilis, excepturi adipisci eveniet unde quas aperiam quo perferendis dolores voluptates.
+      </p>
+    </div>
+<!-- 
+      <div class="whatWeDo">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic fuga pariatur fugit ex cum ipsum autem reiciendis voluptatibus voluptas facilis, excepturi adipisci eveniet unde quas aperiam quo perferendis dolores voluptates.
+        </p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </article>
+</div>
+
+
+<!-- map script -->
+<script src="script.js"></script>
+<script src="leaflet.js" ></script>
+
+</body>
+</html>

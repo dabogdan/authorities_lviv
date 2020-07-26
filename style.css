@@ -1,0 +1,374 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 1200px;
+
+}
+
+html {
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-top: auto;*/
+}
+
+body {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  align-items: center; 
+}
+
+p {
+  margin: 0 0 0.9rem 0;
+}
+
+a {
+  color: #000;
+}
+
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.4);
+  position: sticky;
+  /*position: absolute;*/
+  top: 0;
+  margin-right: 1rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*overflow: hidden;*/
+  /*overflow: scroll;*/
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.4);
+}
+
+.header li a {
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  /*background-color: #f4f4f4;*/
+  /*text-decoration: underline;*/
+  color: #4de8de;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 1.87rem 1.43rem;
+  position: relative;
+  user-select: none;
+  background-color: #4de8de;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*dropdown*/
+.dropdown {
+  position: absolute;
+  /*display: inline-block;*/
+  /*float: right;*/
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-weight: 700;
+}
+
+.dropdown-content {
+  display: none;
+  position: block;
+  min-width: 11rem;
+  box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    /*text-decoration: underline;*/
+    color: white;
+    background-color: black;
+}
+
+
+/* device width = 600px */
+
+@media (min-width: 600px) {
+  .header li {
+    float: right;
+  }
+  .header li a {
+    /*display: none;*/
+    padding: 1rem 2rem;
+    /*display: block;*/
+    text-align: right;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    /*display: none;*/
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/*content*/
+.center { 
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem; 
+  font-weight: 700;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  align-items: center;
+}
+
+
+.episode {
+  /*display: flex;*/
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-gap: 10px;
+  position: relative;
+  text-align: left;
+}
+/*style of the map*/
+.mapid {
+  /*font-size: 10vw;*/
+  /*font-weight: 600;*/
+  /*margin: 2rem 1rem 0;*/
+  position: sticky;
+  top: 5em;
+  height: 100%;
+  width: 100%;
+  /*text-align: center;*/
+  /*height: calc(10vw + 20px);*/
+  /*transition: all 0.2s ease-in;*/
+  /*box-shadow: 0, 0, 10px rgba(0,0,0,0.5);*/
+}
+
+/*content of the right column*/
+.episode__content {
+  border-top: 2px solid #fff;
+  /*display: flex;*/
+  /*padding: 1rem 1rem;*/
+  right: 1rem;
+}
+
+.episode__content .title {
+  font-weight: 600
+}
+
+.episode__content .story {
+  line-height: 1.8rem;
+}
+@media (max-device-width: 600px) {
+  .episode__content .mapid {
+    display: block;
+  }
+  .header .menu li {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+  .header .menu-btn:checked ~ .menu li {
+    display: block;
+  }
+  .center { 
+  margin: 0, 1rem;
+  }
+}
+
+
+/*@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 1rem;
+  }*/
+}
+}
+
+/*list of institutions*/
+
+.description {
+  width: 50rem;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  z-index: 1;
+  text-align: right;
+
+  font-size: 1rem;
+
+}
+
+.paragraph {
+  border: 1px solid gray;
+  padding: 1rem;
+  /*border-radius: 20px;*/
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+}
+
+.institution {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.institution:hover {
+  text-decoration: underline;
+}
+
+.address {
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+
+  padding: 0.8rem 1rem;
+  border: 1px solid #6A696B;
+  border-radius: 20px;
+  background: none;
+  line-height: 1.1;
+  min-width: 170px;
+
+  font-family: inherit;
+  font-size: 1.06rem;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  transition: background-color .2s linear, color .2s linear;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.24);
+  }
+
+.btn:focus {
+  outline: none;
+}
+
+.whatWeDo {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4em;
+  height: 50px;
+  /*padding: 2rem;*/
+  z-index: -1;
+}
+
+
+
