@@ -42,7 +42,7 @@
 		.bindPopup("<b>Welcome to us!</b><br />This is the " + Lviv_Police);
 
 // Ombudsman
-	const ombudsmanMarker = L.marker([49.842108, 24.022006]).addTo(mymap)
+	const ombudsmanMarker = L.marker([49.840785, 24.037069]).addTo(mymap)
 		.bindPopup("<b>Welcome to us!</b><br />This is the " + Lviv_Ombudsman);
 
 
