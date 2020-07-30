@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *,
 *::before,
 *::after {
@@ -34,6 +41,7 @@ a {
 .header {
   background-color: #fff;
   box-shadow: 0 2px 10px 0 rgba(0,0,0,.4);
+  position: -webkit-sticky;
   position: sticky;
   /*position: absolute;*/
   top: 0;
@@ -93,7 +101,10 @@ a {
   float: right;
   padding: 1.87rem 1.43rem;
   position: relative;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: #4de8de;
 }
 
@@ -213,6 +224,10 @@ a {
   .header .menu-icon {
     display: none;
   }
+  .episode { 
+    grid-template-columns: repeat(3, 1fr); 
+  } 
+
 }
 
 /*content*/
@@ -232,9 +247,13 @@ a {
 
 .episode {
   /*display: flex;*/
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  grid-gap: 10px;
+  -ms-grid-columns: 1.5fr 10px 1fr 10px 1fr;
+  grid-template-columns: minmax(300px, 2fr) minmax(200px, 1fr) minmax(200px, 1fr);
+  grid-template-rows: 3fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   position: relative;
   text-align: left;
 }
@@ -243,6 +262,7 @@ a {
   /*font-size: 10vw;*/
   /*font-weight: 600;*/
   /*margin: 2rem 1rem 0;*/
+  position: -webkit-sticky;
   position: sticky;
   top: 5em;
   height: 100%;
@@ -287,18 +307,12 @@ a {
 }
 
 
-/*@media (max-width: 576px) {
-  .episode__content .story {
-    font-size: 1rem;
-  }*/
-}
-}
 
 /*list of institutions*/
 
 .description {
-  width: 50rem;
-  position: absolute;
+  width: 100%;
+  position: block;
   top: 2rem;
   right: 1rem;
   z-index: 1;
@@ -374,6 +388,5 @@ a {
   /*padding: 2rem;*/
   z-index: -1;
 }
-
 
 
