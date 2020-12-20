@@ -3,16 +3,16 @@ header {
     display: none;
     padding: 1rem;
 }
-header .logo {
-    color: #000;
-    font-weight: 700;
-    width: auto;
-}
-header .menu-btn {
-    width: 18px;
-    float: right;
-    cursor: pointer;
-}
+/*header .logo {*/
+/*    color: #000;*/
+/*    font-weight: 700;*/
+/*    width: auto;*/
+/*}*/
+/*header .menu-btn {*/
+/*    width: 18px;*/
+/*    float: right;*/
+/*    cursor: pointer;*/
+/*}*/
 section {
     padding: 4em;
 }
@@ -70,9 +70,7 @@ nav ul span {
     font-size: 0.75em;
     margin-top: 20px;
 }
-nav ul li {
-    opacity: 0;
-}
+
 .show-menu {
     display: block;
     -webkit-animation: slide-menu 1s ease-in forwards;
@@ -185,11 +183,16 @@ nav ul li {
     -webkit-animation: menu-item-anim 0.6s forwards 1s ease-in-out;
     animation: menu-item-anim 0.6s forwards 1s ease-in-out;
 }
+
 .half-overlay ul:nth-of-type(2) {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
     -webkit-animation: menu-item-anim 0.6s forwards 1.2s ease-in-out;
     animation: menu-item-anim 1.2s forwards 1.2s ease-in-out;
     padding: 0 0 80px;
 }
+
 
 /*slide menu */
 @-webkit-keyframes slide-menu {

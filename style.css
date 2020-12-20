@@ -44,7 +44,7 @@ a {
     max-width: 1200px;
     z-index: 1;
     max-height: 50px;
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 1rem 0;
     font-weight: 700;
 }
 
@@ -58,7 +58,11 @@ a {
     padding-top: 1rem;
     cursor: pointer;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
+}
+
+.dropdown a {
+    margin-left: 2rem;
 }
 
 .dropdown-content {
@@ -106,6 +110,9 @@ a {
 /*regions-list*/
 .regions-list {
     grid-template-columns: 1fr 1fr;
+}
+.regions-list li span:hover{
+    color: white;
 }
 
 
@@ -300,7 +307,7 @@ a {
     }
 
     .nav {
-        grid-template-columns: 2fr 4fr .5fr;
+        grid-template-columns: 3fr 2fr .5fr;
     }
 
     .content {
