@@ -118,4 +118,3 @@ mymap.on('click', onMapClick);
 // changeToOmbudsman = () => {
 //     changeContent.innerHTML = whatOmbudsman_does;
 // }
-

@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="287ab42e-0ce7-4b92-b90e-98508d8af3a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/burger/burger.css" beforeDir="false" afterPath="$PROJECT_DIR$/burger/burger.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/burger/overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/burger/overlay.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,5 +118,9 @@
       <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="448" y="267" key="scopes/0.23.1280.722@0.23.1280.722" timestamp="1608106016499" />
+    <state x="303" y="66" width="672" height="678" key="search.everywhere.popup" timestamp="1608541146717">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state x="303" y="66" width="672" height="678" key="search.everywhere.popup/0.23.1280.722@0.23.1280.722" timestamp="1608541146717" />
   </component>
 </project>
