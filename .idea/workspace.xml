@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="287ab42e-0ce7-4b92-b90e-98508d8af3a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ombudsman.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/ombudsman.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/police.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/police.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rolofs.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rolofs.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaflet.css" beforeDir="false" afterPath="$PROJECT_DIR$/leaflet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +89,7 @@
       <workItem from="1608103555828" duration="375000" />
       <workItem from="1608105872125" duration="20546000" />
       <workItem from="1608366941446" duration="39806000" />
+      <workItem from="1611548750223" duration="5774000" />
     </task>
     <servers />
   </component>

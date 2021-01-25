@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Citizens Information Portal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="burger/overlay.css">
     <link rel="stylesheet" href="burger/burger.css">
@@ -85,9 +85,8 @@
         </ul>
         <ul id="institution-text"></ul>
     </nav>
-    <p class="center">Інтерактивна карта державних установ в <span style="color: #4de8de;">{районі}</span></p>
-
     <section class="content grid">
+        <p class="center">Інтерактивна карта державних установ в <span style="color: #4de8de;">{районі}</span></p>
         <!-- map -->
         <div id="mapid" class="mapid"></div>
         <!-- search-->
@@ -114,7 +113,7 @@
                 <br>
                 <!-- Lviv SSU -->
                 <div class="paragraph" onmouseover="ssuMarker.openPopup();">
-                    <p class="title"> УСБУ у
+                    <p class="title"> Управління СБУ у
                         Львівській області</p>
                     <p class="address"><span style="color: gray;">79012, м. Львів, вул. Вітовського, 55</span></p>
                     <div class="institutions grid">
@@ -159,33 +158,28 @@
                     </div>
                 </div>
                 <br>
+                <div class="paragraph" onmouseover="ombudsmanMarker.openPopup();">
+                    <p class="title"> Представник Уповноваженого
+                        ВРУ з прав людини в західних областях</p>
+                    <p class="address"><span style="color: gray;">вул. Винниченка, 18, м. Львів, 79000</span></p>
 
-                <!-- Sample district -->
-                <div class="paragraph" onmouseover="marcusPolygon.openPopup()">
-                    <a href="#" target="_blank" class="institution"> Зразок району </a>
-                    <p class="address"><span style="color: gray;">Зразковий район міста Львова</span></p>
-                    <a href="https://goo.gl/maps/CLf6iHG6xb9Q6edM8" target="_blank" class="btn">Карта Google</a>
-                    <!-- <button class="btn" onclick="marcusPolygon.openPopup()">показати на карті</button> <br> -->
+                    <div class="institutions grid">
+                        <a class="btn" href="http://www.ombudsman.gov.ua/ua" target="_blank">Сайт</a>
+                        <a target="_blank"
+                           class="btn open-description"
+                           obj="ombudsman"
+                           onclick="onClick(this);"
+                        >Про нас</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--        <div class="whatWeDo">-->
-        <!--            <p>Наведіть мишкою на картку організації зі списку, щоб подивитися про неї детальну інформацію.-->
-        <!--            </p>-->
-        <!--        </div>-->
-        <!--
-              <div class="whatWeDo">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic fuga pariatur fugit ex cum ipsum autem reiciendis voluptatibus voluptas facilis, excepturi adipisci eveniet unde quas aperiam quo perferendis dolores voluptates.
-                </p> -->
-        <!-- </div> -->
-        <!-- </div> -->
     </section>
 </div>
 
 
 <!-- map script -->
-<script src="js/script.js"></script>
+<script src="js/map.js"></script>
 <script src="js/overlay.js"></script>
 <script src="js/leaflet.js"></script>
 <script src="js/search.js"></script>
