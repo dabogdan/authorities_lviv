@@ -1,7 +1,7 @@
 let Lviv_PPO = "<a href=\"https://lviv.gp.gov.ua/ua/index.html\" target=\"_blank\">Прокуратура<br> <img class=\"ppoImage\" src=\"images/PPO.jpeg\"></a>";
-let Lviv_SSU = "<a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br> <img class=\"mapImage\" src=\"images/SSU.png\"></a>";
-let Lviv_Police = "<a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br> <img class=\"policeImage\" src=\"images/police.png\"></a>";
-let Lviv_Ombudsman = "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\">Обмудсман<br> <img class=\"ombudsmanImage\" src=\"images/ombudsman.jpg\"></a>";
+let Lviv_SSU = "<a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br> <img class=\"mapImage\" src=\"images/ssu.jpeg\"></a>";
+let Lviv_Police = "<a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br> <img class=\"policeImage\" src=\"images/police.jpeg\"></a>";
+let Lviv_Ombudsman = "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\">Обмудсман<br> <img class=\"ombudsmanImage\" src=\"images/ombudsman.jpeg\"></a>";
 
 let mymap = L.map('mapid').setView([49.837, 24.032], 14);
 
@@ -21,7 +21,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // Lviv PPO
 
 const ppoMarker = L.marker([49.83675, 24.03211]).addTo(mymap)
-    .bindPopup(Lviv_PPO).openPopup();
+    .bindPopup(Lviv_PPO);
 
 // Lviv SSU
 

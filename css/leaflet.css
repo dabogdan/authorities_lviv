@@ -658,5 +658,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	height: 80px;
 	align-items: center;
 	margin-top: 5px;
-	border-radius: 50%;
+	border-radius: 0;
+}
+
+.mapImage {
+	border-radius: 0;
 }
