@@ -20,16 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="287ab42e-0ce7-4b92-b90e-98508d8af3a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ombudsman.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/ombudsman.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/police.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/police.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/rolofs.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/rolofs.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leaflet.css" beforeDir="false" afterPath="$PROJECT_DIR$/leaflet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaflet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/leaflet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +54,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
@@ -89,7 +86,7 @@
       <workItem from="1608103555828" duration="375000" />
       <workItem from="1608105872125" duration="20546000" />
       <workItem from="1608366941446" duration="39806000" />
-      <workItem from="1611548750223" duration="5774000" />
+      <workItem from="1611548750223" duration="17144000" />
     </task>
     <servers />
   </component>
@@ -117,10 +114,75 @@
       <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="314" y="182" key="EditFileWatcherDialog/0.23.1280.722@0.23.1280.722" timestamp="1608106022836" />
-    <state x="148" y="39" key="SettingsEditor" timestamp="1608113640422">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1257" height="223" key="GridCell.Tab.0.bottom" timestamp="1611655552142">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.0.bottom/0.23.1280.722@0.23.1280.722" timestamp="1611655552142" />
+    <state width="1257" height="223" key="GridCell.Tab.0.center" timestamp="1611655552141">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.0.center/0.23.1280.722@0.23.1280.722" timestamp="1611655552141" />
+    <state width="1257" height="223" key="GridCell.Tab.0.left" timestamp="1611655552140">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.0.left/0.23.1280.722@0.23.1280.722" timestamp="1611655552140" />
+    <state width="1257" height="223" key="GridCell.Tab.0.right" timestamp="1611655552141">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.0.right/0.23.1280.722@0.23.1280.722" timestamp="1611655552141" />
+    <state width="1257" height="223" key="GridCell.Tab.1.bottom" timestamp="1611655552146">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.1.bottom/0.23.1280.722@0.23.1280.722" timestamp="1611655552146" />
+    <state width="1257" height="223" key="GridCell.Tab.1.center" timestamp="1611655552145">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.1.center/0.23.1280.722@0.23.1280.722" timestamp="1611655552145" />
+    <state width="1257" height="223" key="GridCell.Tab.1.left" timestamp="1611655552142">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.1.left/0.23.1280.722@0.23.1280.722" timestamp="1611655552142" />
+    <state width="1257" height="223" key="GridCell.Tab.1.right" timestamp="1611655552145">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.1.right/0.23.1280.722@0.23.1280.722" timestamp="1611655552145" />
+    <state width="1257" height="223" key="GridCell.Tab.2.bottom" timestamp="1611655552147">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.2.bottom/0.23.1280.722@0.23.1280.722" timestamp="1611655552147" />
+    <state width="1257" height="223" key="GridCell.Tab.2.center" timestamp="1611655552146">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.2.center/0.23.1280.722@0.23.1280.722" timestamp="1611655552146" />
+    <state width="1257" height="223" key="GridCell.Tab.2.left" timestamp="1611655552146">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.2.left/0.23.1280.722@0.23.1280.722" timestamp="1611655552146" />
+    <state width="1257" height="223" key="GridCell.Tab.2.right" timestamp="1611655552146">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.2.right/0.23.1280.722@0.23.1280.722" timestamp="1611655552146" />
+    <state width="1257" height="223" key="GridCell.Tab.3.bottom" timestamp="1611655552148">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.3.bottom/0.23.1280.722@0.23.1280.722" timestamp="1611655552148" />
+    <state width="1257" height="223" key="GridCell.Tab.3.center" timestamp="1611655552147">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.3.center/0.23.1280.722@0.23.1280.722" timestamp="1611655552147" />
+    <state width="1257" height="223" key="GridCell.Tab.3.left" timestamp="1611655552147">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.3.left/0.23.1280.722@0.23.1280.722" timestamp="1611655552147" />
+    <state width="1257" height="223" key="GridCell.Tab.3.right" timestamp="1611655552148">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state width="1257" height="223" key="GridCell.Tab.3.right/0.23.1280.722@0.23.1280.722" timestamp="1611655552148" />
+    <state x="148" y="23" key="SettingsEditor" timestamp="1611581076436">
+      <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="148" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1608113640422" />
+    <state x="148" y="23" key="SettingsEditor/0.23.1280.722@0.23.1280.722" timestamp="1611581076435" />
     <state x="448" y="267" key="scopes" timestamp="1608106016499">
       <screen x="0" y="23" width="1280" height="722" />
     </state>
