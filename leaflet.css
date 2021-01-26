@@ -402,7 +402,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* Default icon URLs */
 .leaflet-default-icon-path {
-	background-image: url(../images/marker-icon.png);
+	background-image: url(images/marker-icon.png);
 	}
 
 
@@ -486,7 +486,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin: 0.7rem 0.5rem;
 	line-height: 1.4;
 	width: 100px;
-	height: 110px;
+	height: 100px;
 	}
 .leaflet-popup-content p {
 	margin: 18px 0;
