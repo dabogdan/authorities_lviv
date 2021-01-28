@@ -99,90 +99,7 @@
         <!--  cards -->
         <div class="cards">
             <div class="description">
-                <div class="paragraph" onmouseover="ppoMarker.openPopup();">
-                    <!-- Lviv PPO -->
-                    <div class="card grid">
-                        <img class="card-image" src="images/PPO.png">
-                        <div class="title_and_address">
-                            <p class="title"> Прокуратура
-                                Львівської області</p>
-                            <p class="address"><span style="color: gray;">проспект Шевченка, 17-19, Львів, Львівська область, 79000</span>
-                            </p>
-                        </div>
-                        <div class="institutions grid">
-                            <a class="btn" href="https://lviv.gp.gov.ua/ua/index.html" target="_blank">Сайт</a>
-                            <a target="_blank"
-                               class="btn open-description"
-                               obj="lvivPPO"
-                               onclick="onClick(this);">Про нас</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <!-- Lviv SSU -->
-                <div class="paragraph" onmouseover="ssuMarker.openPopup();">
-                    <div class="card grid">
-                        <img class="card-image" src="images/SSU.png">
-                        <div class="title_and_address">
-                            <p class="title"> Управління СБУ у
-                                Львівській області</p>
-                            <p class="address"><span
-                                    style="color: gray;">79012, м. Львів, вул. Вітовського, 55</span>
-                            </p>
-                        </div>
-                        <div class="institutions grid">
-                            <a class="btn" href="https://ssu.gov.ua/contacts/upravlinnia" target="_blank">Сайт</a>
-                            <a target="_blank"
-                               class="btn open-description"
-                               obj="lvivSSU"
-                               onclick="onClick(this);"
-                            >Про нас</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="paragraph" onmouseover="policeMarker.openPopup();">
-                    <div class="card grid">
-                        <img class="card-image" src="images/police.png">
-                        <div class="title_and_address">
-                            <p class="title"> ГУ НП у Львівській
-                                області</p>
-                            <p class="address">площа Генерала Григоренка, 3, Львів, Львівська область, 79000
-                            </p>
-                        </div>
-                        <div class="institutions grid">
-                            <a class="btn" href="https://www.npu.gov.ua/" target="_blank">Сайт</a>
-                            <a target="_blank"
-                               class="btn open-description"
-                               obj="lvivNPU"
-                               onclick="onClick(this);"
-                            >Про нас</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="paragraph" onmouseover="ombudsmanMarker.openPopup();">
-                    <div class="card grid">
-                        <img class="card-image" src="images/ombudsman.jpg">
-                        <div class="title_and_address">
-                            <p class="title"> Представник Уповноваженого
-                                ВРУ з прав людини в західних областях</p>
-                            <p class="address"><span style="color: #39606D;">вул. Винниченка, 18, м. Львів, 79000</span>
-                            </p>
-                        </div>
-                        <div class="institutions grid">
-                            <a class="btn" href="http://www.ombudsman.gov.ua/ua" target="_blank">Сайт</a>
-                            <a target="_blank"
-                               class="btn open-description"
-                               obj="ombudsman"
-                               onclick="onClick(this);"
-                            >Про нас</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
+<!--                here all the JS code creates cards-->
             </div>
         </div>
     </section>
@@ -190,11 +107,14 @@
 
 
 <!-- map script -->
-<script src="js/map.js"></script>
-<script src="js/overlay.js"></script>
+
+
 <script src="js/leaflet.js"></script>
 <script src="js/search.js"></script>
+<script src="js/state.js"></script>
+<script src="js/cards.js"></script>
+<script src="js/map.js"></script>
 <script src="js/eventHandlers.js"></script>
-
+<script src="js/overlay.js"></script>
 </body>
 </html>

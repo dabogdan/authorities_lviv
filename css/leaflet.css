@@ -257,7 +257,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-container a {
 	color: #0078A8;
 	text-decoration: none;
-	margin-bottom: 10px;
 	}
 .leaflet-container a:hover {
 	color: #4de8de;
@@ -478,14 +477,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-bottom: 20px;
 	}
 .leaflet-popup-content-wrapper {
-	padding: 1px;
+	padding: 1px 5px 5px;
 	text-align: center;
 	border-radius: 3px;
 	}
 .leaflet-popup-content {
-	margin: 0.7rem 0.5rem;
+	margin: 0.7rem 0 0;
 	line-height: 1.4;
-	width: 100px;
+	width: 99px;
 	height: 110px;
 	}
 .leaflet-popup-content p {
@@ -654,8 +653,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /*size of pictures on map popups*/
 
 .ppoImage, .mapImage, .policeImage, .ombudsmanImage {
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 90px;
 	align-items: center;
 	margin-top: 5px;
 	border-radius: 0;

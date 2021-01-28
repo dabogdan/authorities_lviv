@@ -1,8 +1,3 @@
-let Lviv_PPO = "<a href=\"https://lviv.gp.gov.ua/ua/index.html\" target=\"_blank\">Прокуратура<br> <img class=\"ppoImage\" src=\"images/PPO.jpeg\"></a>";
-let Lviv_SSU = "<a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br> <img class=\"mapImage\" src=\"images/ssu.jpeg\"></a>";
-let Lviv_Police = "<a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br> <img class=\"policeImage\" src=\"images/police.jpeg\"></a>";
-let Lviv_Ombudsman = "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\">Обмудсман<br> <img class=\"ombudsmanImage\" src=\"images/ombudsman.jpeg\"></a>";
-
 let mymap = L.map('mapid').setView([49.837, 24.032], 14);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -17,24 +12,36 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // marker!
 
-
 // Lviv PPO
+// let popupName;
+let itWorks = (e) => {
+    console.log(e.originalEvent + ' works');
+}
+const ppoMarker = L.marker([49.83675, 24.03211])
+    .addTo(mymap)
+    .bindPopup(institutions_Lviv_Region[0].popUpLink)
+    .on('mouseover', itWorks, this)
+    .on('click', itWorks);
+    // .addEventListener('click', (e) => {
+    //     popupName = e.target._popup._contentNode.children[0].name;
+    // });
 
-const ppoMarker = L.marker([49.83675, 24.03211]).addTo(mymap)
-    .bindPopup(Lviv_PPO);
+// console.log(ppoMarker.name);
+
+
 
 // Lviv SSU
 
 const ssuMarker = L.marker([49.831588, 24.019117]).addTo(mymap)
-    .bindPopup(Lviv_SSU);
+    .bindPopup(institutions_Lviv_Region[1].popUpLink);
 
 // Lviv Police
 const policeMarker = L.marker([49.842108, 24.022006]).addTo(mymap)
-    .bindPopup(Lviv_Police);
+    .bindPopup(institutions_Lviv_Region[2].popUpLink);
 
 // Ombudsman
 const ombudsmanMarker = L.marker([49.840785, 24.037069]).addTo(mymap)
-    .bindPopup(Lviv_Ombudsman);
+    .bindPopup(institutions_Lviv_Region[3].popUpLink);
 
 // popup
 let popup = L.popup();
