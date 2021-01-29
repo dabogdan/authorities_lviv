@@ -1,5 +1,11 @@
-// let paragraph = document.querySelector('.paragraph');
+
 let descriptionTag = document.querySelector('.description');
+
+let lviv_region_map_data = {
+    x: 49.837,
+    y: 24.032,
+    z: 14
+}
 
 let institutions_Lviv_Region = [
     lvivPPO = {
@@ -22,11 +28,14 @@ let institutions_Lviv_Region = [
                     <li> -не розглядаємо звернення щодо можливого порушення земельного законодавства, незаконного використання земельних ресурсів, врегулювання земельних відносин;</li>
                     <li> -не розглядаємо звернення з приводу порушення законодавства про звернення громадян, про доступ до публічної інформації.</li>`,
         popUpLink: '<a href=\"https://lviv.gp.gov.ua/ua/index.html\" target=\"_blank\" name="LvivPPO">Прокуратура<br> <img class=\"ppoImage\" src=\"images/PPO.jpeg\"></a>',
-        onmouseover: "ppoMarker.openPopup();",
+        onmouseover: "lvivPPO",
         imgSrc: "images/PPO.png",
         address: "проспект Шевченка, 17-19, Львів, Львівська область, 79000",
         btnHref: "https://lviv.gp.gov.ua/ua/index.html",
-
+        marker: {
+            x: 49.83675,
+            y: 24.03211,
+        },
     },
     lvivSSU = {
         name: `lvivSSU`,
@@ -44,10 +53,14 @@ let institutions_Lviv_Region = [
                         <li>-         не здійснюємо охорону громадського порядку.</li>`,
 
         popUpLink: "<a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br> <img class=\"mapImage\" src=\"images/ssu.jpeg\"></a>",
-        onmouseover: "ssuMarker.openPopup();",
+        onmouseover: "",
         imgSrc: "images/SSU.png",
         address: "79012, м. Львів, вул. Вітовського, 55",
-        btnHref: "https://ssu.gov.ua/contacts/upravlinnia"
+        btnHref: "https://ssu.gov.ua/contacts/upravlinnia",
+        marker: {
+            x: 49.831588,
+            y: 24.019117,
+        }
     },
     lvivNPU = {
         name: `lvivNPU`,
@@ -72,10 +85,14 @@ let institutions_Lviv_Region = [
         popUpLink: "<a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br> " +
             "<img class=\"policeImage\" src=\"images/police.jpeg\">" +
             "</a>",
-        onmouseover: "policeMarker.openPopup();",
+        onmouseover: "",
         imgSrc: "images/police.png",
         address: "площа Генерала Григоренка, 3, Львів, Львівська область, 79000",
-        btnHref: "https://www.npu.gov.ua/"
+        btnHref: "https://www.npu.gov.ua/",
+        marker: {
+            x: 49.842108,
+            y: 24.022006,
+        }
 },
     lvivOmbudsman = {
         name: `lvivOmbudsman`,
@@ -94,12 +111,46 @@ let institutions_Lviv_Region = [
                         <li>- не здійснюємо досудове розслідування та не притягуємо до кримінальної відповідальності винних осіб;</li>
                         <li>- не переглядаємо судові рішення;</li>
                         <li>- не переглядаємо рішення органів державної влади, органів місцевого самоврядування, не приймаємо рішень замість цих органів та не притягуємо до дисциплінарної відповідальності їх працівників.</li>`,
-        popUpLink: "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\" onmouseover='itWorks()'>Обмудсман<br> " +
+        popUpLink: "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\" onmouseover=''>Обмудсман<br> " +
             "<img class=\"ombudsmanImage\" src=\"images/ombudsman.jpeg\">" +
             "</a>",
-        onmouseover: "ombudsmanMarker.openPopup();",
+        onmouseover: "",
         imgSrc: "images/ombudsman.jpg",
         address: "вул. Винниченка, 18, м. Львів, 79000",
-        btnHref: "http://www.ombudsman.gov.ua/ua"
+        btnHref: "http://www.ombudsman.gov.ua/ua",
+        marker: {
+            x: 49.840785,
+            y: 24.037069,
+        }
     }
 ]
+
+let mymap = L.map('mapid').setView([lviv_region_map_data.x, lviv_region_map_data.y], lviv_region_map_data.z);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1
+}).addTo(mymap);
+
+
+// creating markers and insert them into the array of instutitions
+for (let i = 0; i < institutions_Lviv_Region.length; i++) {
+    institutions_Lviv_Region[i].onmouseover = L.marker([institutions_Lviv_Region[i].marker.x, institutions_Lviv_Region[i].marker.y]).addTo(mymap)
+            .bindPopup(institutions_Lviv_Region[i].popUpLink);
+}
+
+// popup
+let popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("Ви натиснули карту на точці " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);

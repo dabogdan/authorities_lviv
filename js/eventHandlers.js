@@ -1,7 +1,8 @@
 let paragraphs = document.querySelectorAll('.paragraph');
+//change of the logo border color to red on the cards when hover over them
 //add attributes for events
 paragraphs.forEach((e) => {
-    e.setAttribute('onmouseover', e.getAttribute('onmouseover') + 'redBorderStyle(this);');
+    e.setAttribute('onmouseover', 'redBorderStyle(this);');
     e.setAttribute('onmouseout', 'normalBorderStyle(this);');
 })
 //change color of the card-image border

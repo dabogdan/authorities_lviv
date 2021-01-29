@@ -1,11 +1,23 @@
-
 // creating the card elements for the cards section
 for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     // create paragraphs quantity according to the array
     let tagParagraph = document.createElement("div");
     tagParagraph.classList.add("paragraph");
-    tagParagraph.setAttribute('onmouseover', institutions_Lviv_Region[i].onmouseover)
     descriptionTag.appendChild(tagParagraph);
+
+    tagParagraph.addEventListener('mouseover', () => {
+        institutions_Lviv_Region[i].onmouseover.openPopup();
+    });
+
+    //eventhandler for click event on marker
+    institutions_Lviv_Region[i].onmouseover.addEventListener('click', () => {
+        for (let j = 0; j < paragraph.length; j++) {
+            paragraph[j].children[0].children[0].style.border = '2px solid rgba(57,96,109,0)';
+            paragraph[j].style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.4)';
+        }
+        redBorderStyle(paragraph[i]);
+        paragraph[i].style.boxShadow = '2px 2px 25px rgba(0, 0, 0, 0.4)';
+    })
 
     //.card .grid
     let tagCard = document.createElement('div');
