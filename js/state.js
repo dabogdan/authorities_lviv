@@ -1,4 +1,3 @@
-
 let descriptionTag = document.querySelector('.description');
 
 let lviv_region_map_data = {

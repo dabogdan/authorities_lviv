@@ -5,19 +5,29 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     tagParagraph.classList.add("paragraph");
     descriptionTag.appendChild(tagParagraph);
 
+    // event listener 'mouseover' of the paragraph - adding shadow
+
     tagParagraph.addEventListener('mouseover', () => {
         institutions_Lviv_Region[i].onmouseover.openPopup();
+            for (let j = 0; j < paragraph.length; j++) {
+                normalCardShadow(paragraph[j]);
+                normalBorderStyle(paragraph[j]);
+        }
+        bigCardShadow(paragraph[i]);
+        redBorderStyle(paragraph[i]);
     });
 
-    //eventhandler for click event on marker
+    //eventhandler for 'click' event on the marker
     institutions_Lviv_Region[i].onmouseover.addEventListener('click', () => {
         for (let j = 0; j < paragraph.length; j++) {
-            paragraph[j].children[0].children[0].style.border = '2px solid rgba(57,96,109,0)';
-            paragraph[j].style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.4)';
+            normalCardShadow(paragraph[j]);
+            normalBorderStyle(paragraph[j]);
         }
         redBorderStyle(paragraph[i]);
-        paragraph[i].style.boxShadow = '2px 2px 25px rgba(0, 0, 0, 0.4)';
+        bigCardShadow(paragraph[i]);
     })
+
+
 
     //.card .grid
     let tagCard = document.createElement('div');

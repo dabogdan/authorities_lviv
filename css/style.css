@@ -217,14 +217,14 @@ a {
 }
 
 .paragraph {
-    /*border: 1px solid gray;*/
     padding: 1rem;
+    margin-bottom: .5rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     transition: box-shadow .2s linear;
 }
 
 .paragraph:hover {
-    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.4);
+    /*box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.4);*/
 }
 
 .paragraph .title {
