@@ -124,6 +124,7 @@ let institutions_Lviv_Region = [
     }
 ]
 
+//creating map
 let mymap = L.map('mapid').setView([lviv_region_map_data.x, lviv_region_map_data.y], lviv_region_map_data.z);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -135,10 +136,18 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1
 }).addTo(mymap);
 
+//marker icon
+let myIcon = L.icon({
+    iconUrl: 'images/marker-icon.svg',
+    iconSize: [20, 35],
+    shadowUrl: 'images/marker-shadow.png',
+    shadowSize: [20, 40],
+    shadowAnchor: [5, 50],
+});
 
 // creating markers and insert them into the array of instutitions
 for (let i = 0; i < institutions_Lviv_Region.length; i++) {
-    institutions_Lviv_Region[i].onmouseover = L.marker([institutions_Lviv_Region[i].marker.x, institutions_Lviv_Region[i].marker.y]).addTo(mymap)
+    institutions_Lviv_Region[i].onmouseover = L.marker([institutions_Lviv_Region[i].marker.x, institutions_Lviv_Region[i].marker.y], {icon: myIcon}).addTo(mymap)
             .bindPopup(institutions_Lviv_Region[i].popUpLink);
 }
 
