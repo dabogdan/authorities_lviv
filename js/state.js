@@ -141,8 +141,8 @@ let myIcon = L.icon({
     iconUrl: 'images/marker-icon.svg',
     iconSize: [20, 35],
     shadowUrl: 'images/marker-shadow.png',
-    shadowSize: [20, 40],
-    shadowAnchor: [5, 50],
+    shadowSize: [20, 30],
+    shadowAnchor: [5, 20],
 });
 
 // creating markers and insert them into the array of instutitions
