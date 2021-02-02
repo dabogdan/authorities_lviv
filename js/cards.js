@@ -3,6 +3,7 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     // create paragraphs quantity according to the array
     let tagParagraph = document.createElement("div");
     tagParagraph.classList.add("paragraph");
+    tagParagraph.setAttribute('id', 'paragraph');
     descriptionTag.appendChild(tagParagraph);
 
     // event listener 'mouseover' of the paragraph - adding shadow
