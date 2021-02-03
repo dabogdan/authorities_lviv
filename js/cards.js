@@ -11,21 +11,18 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     tagParagraph.addEventListener('mouseover', () => {
         institutions_Lviv_Region[i].onmouseover.openPopup();
             for (let j = 0; j < paragraph.length; j++) {
-                normalCardShadow(paragraph[j]);
-                normalBorderStyle(paragraph[j]);
+                unhighlightCard(paragraph[j]);
         }
-        bigCardShadow(paragraph[i]);
-        redBorderStyle(paragraph[i]);
+        highlightCard(paragraph[i]);
     });
 
     //eventhandler for 'click' event on the marker
     institutions_Lviv_Region[i].onmouseover.addEventListener('click', () => {
         for (let j = 0; j < paragraph.length; j++) {
-            normalCardShadow(paragraph[j]);
-            normalBorderStyle(paragraph[j]);
+            unhighlightCard(paragraph[j]);
         }
-        redBorderStyle(paragraph[i]);
-        bigCardShadow(paragraph[i]);
+        highlightCard(paragraph[i]);
+        //scroll to the card when the marker is clicked on the map
         paragraph[i].scrollIntoView({
             behavior: 'smooth',
             block: "center"

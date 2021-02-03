@@ -9,7 +9,7 @@ let lviv_region_map_data = {
 let institutions_Lviv_Region = [
     lvivPPO = {
         name: `lvivPPO`,
-        title: `Прокуратура Львівської області`,
+        title: `Львівська обласна прокуратура`,
         description:    `Що ми робимо: <br><br>
                     <li> - підтримуємо публічне обвинувачення в суді (в рамках кримінального провадження);</li>
                     <li> -	розглядаємо скарги та відновлюємо Ваші порушені права у разі:
@@ -27,7 +27,7 @@ let institutions_Lviv_Region = [
                     <li> -не розглядаємо звернення щодо можливого порушення земельного законодавства, незаконного використання земельних ресурсів, врегулювання земельних відносин;</li>
                     <li> -не розглядаємо звернення з приводу порушення законодавства про звернення громадян, про доступ до публічної інформації.</li>`,
         popUpLink: '<a href=\"https://lviv.gp.gov.ua/ua/index.html\" target=\"_blank\" name="LvivPPO">Прокуратура<br> <img class=\"ppoImage\" src=\"images/PPO.jpeg\"></a>',
-        onmouseover: "lvivPPO",
+        onmouseover: this.name,
         imgSrc: "images/PPO.png",
         address: "проспект Шевченка, 17-19, Львів, Львівська область, 79000",
         btnHref: "https://lviv.gp.gov.ua/ua/index.html",
@@ -52,7 +52,7 @@ let institutions_Lviv_Region = [
                         <li>-         не здійснюємо охорону громадського порядку.</li>`,
 
         popUpLink: "<a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br> <img class=\"mapImage\" src=\"images/ssu.jpeg\"></a>",
-        onmouseover: "",
+        onmouseover: this.name,
         imgSrc: "images/SSU.png",
         address: "79012, м. Львів, вул. Вітовського, 55",
         btnHref: "https://ssu.gov.ua/contacts/upravlinnia",
@@ -84,7 +84,7 @@ let institutions_Lviv_Region = [
         popUpLink: "<a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br> " +
             "<img class=\"policeImage\" src=\"images/police.jpeg\">" +
             "</a>",
-        onmouseover: "",
+        onmouseover: this.name,
         imgSrc: "images/police.png",
         address: "площа Генерала Григоренка, 3, Львів, Львівська область, 79000",
         btnHref: "https://www.npu.gov.ua/",
@@ -113,7 +113,7 @@ let institutions_Lviv_Region = [
         popUpLink: "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\" onmouseover=''>Обмудсман<br> " +
             "<img class=\"ombudsmanImage\" src=\"images/ombudsman.jpeg\">" +
             "</a>",
-        onmouseover: "",
+        onmouseover: this.name,
         imgSrc: "images/ombudsman.jpg",
         address: "вул. Винниченка, 18, м. Львів, 79000",
         btnHref: "http://www.ombudsman.gov.ua/ua",
