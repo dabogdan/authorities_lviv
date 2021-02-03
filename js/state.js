@@ -31,6 +31,7 @@ let institutions_Lviv_Region = [
         imgSrc: "images/PPO.png",
         address: "проспект Шевченка, 17-19, Львів, Львівська область, 79000",
         btnHref: "https://lviv.gp.gov.ua/ua/index.html",
+        webHref: "https://lviv.gp.gov.ua/ua/index.html",
         marker: {
             x: 49.83675,
             y: 24.03211,
@@ -59,6 +60,7 @@ let institutions_Lviv_Region = [
         imgSrc: "images/SSU.png",
         address: "79012, м. Львів, вул. Вітовського, 55",
         btnHref: "https://ssu.gov.ua/contacts/upravlinnia",
+        webHref: "https://ssu.gov.ua/contacts/upravlinnia",
         marker: {
             x: 49.831588,
             y: 24.019117,
@@ -94,6 +96,7 @@ let institutions_Lviv_Region = [
         imgSrc: "images/police.png",
         address: "площа Генерала Григоренка, 3, Львів, Львівська область, 79000",
         btnHref: "https://www.npu.gov.ua/",
+        webHref: "https://www.npu.gov.ua/",
         marker: {
             x: 49.842108,
             y: 24.022006,
@@ -126,6 +129,7 @@ let institutions_Lviv_Region = [
         imgSrc: "images/ombudsman.jpg",
         address: "вул. Винниченка, 18, м. Львів, 79000",
         btnHref: "http://www.ombudsman.gov.ua/ua",
+        webHref: "http://www.ombudsman.gov.ua/ua",
         marker: {
             x: 49.840785,
             y: 24.037069,

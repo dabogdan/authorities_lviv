@@ -29,8 +29,6 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
         })
     })
 
-
-
     //.card .grid
     let tagCard = document.createElement('div');
     tagCard.classList.add("card");
@@ -62,12 +60,12 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     tagCard.appendChild(institutionsTag);
 
     //.btn
-    let btnTag = document.createElement('a');
-    btnTag.classList.add("btn");
-    btnTag.setAttribute('href', institutions_Lviv_Region[i].btnHref);
-    btnTag.setAttribute('target', 'blank');
-    btnTag.innerHTML = "Сайт";
-    institutionsTag.appendChild(btnTag);
+    // let btnTag = document.createElement('a');
+    // btnTag.classList.add("btn");
+    // btnTag.setAttribute('href', institutions_Lviv_Region[i].btnHref);
+    // btnTag.setAttribute('target', 'blank');
+    // btnTag.innerHTML = "Сайт";
+    // institutionsTag.appendChild(btnTag);
 
     //.open-description
     let btnOpenDescription = document.createElement('a');
@@ -78,6 +76,15 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     btnOpenDescription.setAttribute('target', 'blank');
     btnOpenDescription.innerHTML = "Про нас";
     institutionsTag.appendChild(btnOpenDescription);
+
+    //web
+    if(institutions_Lviv_Region[i].webHref != null){
+        let web = document.createElement('a');
+        web.classList.add('web');
+        web.setAttribute('href', institutions_Lviv_Region[i].webHref);
+        web.setAttribute('target', 'blank');
+        institutionsTag.appendChild(web);
+    }
 
     //facebook
     if(institutions_Lviv_Region[i].facebook != null){
@@ -97,7 +104,7 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
         institutionsTag.appendChild(insta);
     }
 
-    //instagram
+    //twitter
     if(institutions_Lviv_Region[i].twitter != null) {
         let twitter = document.createElement('a');
         twitter.classList.add('twitter');
