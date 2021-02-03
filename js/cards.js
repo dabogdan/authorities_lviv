@@ -78,4 +78,31 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     btnOpenDescription.setAttribute('target', 'blank');
     btnOpenDescription.innerHTML = "Про нас";
     institutionsTag.appendChild(btnOpenDescription);
+
+    //facebook
+    if(institutions_Lviv_Region[i].facebook != null){
+        let fb = document.createElement('a');
+        fb.classList.add('facebook');
+        fb.setAttribute('href', institutions_Lviv_Region[i].facebook);
+        fb.setAttribute('target', 'blank');
+        institutionsTag.appendChild(fb);
+    }
+
+    //instagram
+    if(institutions_Lviv_Region[i].insta != null) {
+        let insta = document.createElement('a');
+        insta.classList.add('instagram');
+        insta.setAttribute('href', institutions_Lviv_Region[i].insta);
+        insta.setAttribute('target', 'blank');
+        institutionsTag.appendChild(insta);
+    }
+
+    //instagram
+    if(institutions_Lviv_Region[i].twitter != null) {
+        let twitter = document.createElement('a');
+        twitter.classList.add('twitter');
+        twitter.setAttribute('href', institutions_Lviv_Region[i].twitter);
+        twitter.setAttribute('target', 'blank');
+        institutionsTag.appendChild(twitter);
+    }
 }
