@@ -17,8 +17,10 @@ let normalBorderStyle = (e) => {
 
 let bigCardShadow = (e) => {
     e.style.boxShadow = '2px 2px 25px rgb(0, 0, 0)';
+    e.children[0].style.color = '#EB1B51';
 }
 
 let normalCardShadow = (e) => {
     e.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.4)';
+    e.children[0].style.color = 'rgb(0,0,0)';
 }
