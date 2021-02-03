@@ -26,6 +26,10 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
         }
         redBorderStyle(paragraph[i]);
         bigCardShadow(paragraph[i]);
+        paragraph[i].scrollIntoView({
+            behavior: 'smooth',
+            block: "center"
+        })
     })
 
 
