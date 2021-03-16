@@ -35,17 +35,18 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     tagCard.classList.add("grid");
     tagParagraph.appendChild(tagCard);
 
-    //img logo
-    let logoTag = document.createElement('img');
-    logoTag.classList.add("card-image");
-    logoTag.setAttribute('src', institutions_Lviv_Region[i].imgSrc);
-    tagCard.appendChild(logoTag);
 
     //title
     let titleTag = document.createElement('p');
     titleTag.classList.add("title");
     titleTag.innerHTML = institutions_Lviv_Region[i].title;
     tagCard.appendChild(titleTag);
+
+    //img logo
+    let logoTag = document.createElement('img');
+    logoTag.classList.add("card-image");
+    logoTag.setAttribute('src', institutions_Lviv_Region[i].imgSrc);
+    tagCard.appendChild(logoTag);
 
     //address
     let addressTag = document.createElement('p');
@@ -59,22 +60,16 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     institutionsTag.classList.add("grid");
     tagCard.appendChild(institutionsTag);
 
-    //.btn
-    // let btnTag = document.createElement('a');
-    // btnTag.classList.add("btn");
-    // btnTag.setAttribute('href', institutions_Lviv_Region[i].btnHref);
-    // btnTag.setAttribute('target', 'blank');
-    // btnTag.innerHTML = "Сайт";
-    // institutionsTag.appendChild(btnTag);
-
     //.open-description
     let btnOpenDescription = document.createElement('a');
     btnOpenDescription.classList.add("btn");
     btnOpenDescription.classList.add("open-description");
     btnOpenDescription.setAttribute('onclick', 'onClick(this);');
+    // btnOpenDescription.setAttribute('onmouseover', 'this.style.backgroundColor = "black"');
+    // btnOpenDescription.setAttribute('onmouseout', 'this.style.backgroundColor = "white"');
     btnOpenDescription.setAttribute('obj', institutions_Lviv_Region[i].name);
     btnOpenDescription.setAttribute('target', 'blank');
-    btnOpenDescription.innerHTML = "Про нас";
+    btnOpenDescription.innerHTML = "about";
     institutionsTag.appendChild(btnOpenDescription);
 
     //web

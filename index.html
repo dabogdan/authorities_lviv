@@ -9,6 +9,7 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!--    &lt;!&ndash; Google font Montserrat &ndash;&gt;-->
     <!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300;1,400;1,700&display=swap"-->
     <!--          rel="stylesheet">-->
@@ -23,10 +24,19 @@
 <!-- header -->
 <div class="header">
     <div class="nav grid">
+        <!--  logo -->
+        <div class="logo">
+            <p>We will help you</p>
+        </div>
+        <div class="menu">
+                <a href="/">search</a>
+                <a href="/">about</a>
+                <a href="/">support</a>
+        </div>
+
         <!-- dropdown -->
         <div class="dropdown">
-            <a class="location"> Обрати <span style="color: #4de8de;"> район </span><span
-                    class="fa fa-caret-square-o-down"></span></a>
+            <a class="location"> choose district <span class="fa fa-caret-down"></span></a>
         </div>
         <nav id="regions-popup" class="regions-popup">
             <img src="burger/close-button.svg" alt="menu" class="close-button-regions" id="close-btn-regions">
@@ -52,15 +62,6 @@
                 </li>
             </ul>
         </nav>
-
-        <!--    language switcher-->
-        <div class="lang-menu">
-            <label class="lang_label" for="languages">Мова:</label>
-            <select id="languages" name="languages" onChange="window.location.href=this.value">
-                <option value="/ua" selected>ua</option>
-                <option value="/en">en</option>
-            </select>
-        </div>
         <!-- hamburger menu-->
         <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox"/>
@@ -72,6 +73,11 @@
                 <li><a class="menu__item" href="#">Відгук</a></li>
                 <li><a class="menu__item" href="#">Контакти</a></li>
             </ul>
+        </div>
+        <!--    language switcher-->
+        <div class="lang-menu">
+                <a href="/ua">УКР</a>
+                <a href="/en" class="active">ENG</a>
         </div>
     </div>
 </div><!--./header-->
@@ -88,17 +94,16 @@
     </nav>
     <section class="content grid">
         <div class="place-map">
-            <p class="center">Інтерактивна карта державних установ в <span style="color: #4de8de;">{районі}</span></p>
             <!-- map -->
             <div id="mapid" class="mapid"></div>
         </div>
         <!-- search-->
         <div class="search">
-            <input type="search" placeholder="Шукати..." id="search-institution">
+            <input type="search" placeholder="search by name of institution" id="search-institution">
         </div>
         <!--  cards -->
         <div class="cards">
-            <div class="description">
+            <div class="description grid">
 <!--                here all the JS code creates cards-->
             </div>
         </div>
