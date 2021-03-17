@@ -39,6 +39,7 @@ let institutions_Lviv_Region = [
         facebook: "https://www.facebook.com/lviv.gp.gov.ua/",
         insta: null,
         twitter: null,
+        photo: "url('images/PPO.jpeg')",
     },
     lvivSSU = {
         name: `lvivSSU`,
@@ -67,7 +68,8 @@ let institutions_Lviv_Region = [
         },
         facebook: 'https://www.facebook.com/SBULviv/',
         insta: 'https://www.instagram.com/lvivsbu/',
-        twitter: null
+        twitter: null,
+        photo: "url('images/ssu.jpg')"
     },
     lvivNPU = {
         name: `lvivNPU`,
@@ -104,6 +106,7 @@ let institutions_Lviv_Region = [
         facebook: "https://www.facebook.com/MVS.LVIV/",
         insta: "https://www.instagram.com/lviv_region_police/",
         twitter: "https://twitter.com/lv_npu_gov_ua",
+        photo: "url('images/police.jpeg')"
 },
     lvivOmbudsman = {
         name: `lvivOmbudsman`,
@@ -137,6 +140,7 @@ let institutions_Lviv_Region = [
         facebook: null,
         insta: null,
         twitter: null,
+        photo: "url('images/ombudsman.jpeg')"
     }
 ]
 

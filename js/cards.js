@@ -6,14 +6,20 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     tagParagraph.setAttribute('id', 'paragraph');
     descriptionTag.appendChild(tagParagraph);
 
-    // event listener 'mouseover' of the paragraph - adding shadow
+    // event listeners 'mouseenter' and 'mouseleave' of the paragraph - enabling/disabling shadow
 
-    tagParagraph.addEventListener('mouseover', () => {
+    tagParagraph.addEventListener('mouseenter', () => {
         institutions_Lviv_Region[i].onmouseover.openPopup();
             for (let j = 0; j < paragraph.length; j++) {
                 unhighlightCard(paragraph[j]);
         }
         highlightCard(paragraph[i]);
+    });
+
+    tagParagraph.addEventListener('mouseleave', () => {
+        for (let j = 0; j < paragraph.length; j++) {
+            unhighlightCard(paragraph[j]);
+        }
     });
 
     //eventhandler for 'click' event on the marker
