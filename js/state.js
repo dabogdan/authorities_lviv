@@ -26,7 +26,7 @@ let institutions_Lviv_Region = [
                     <li> - не притягаємо до відповідальності службових осіб, які не надали відповідь на Ваше звернення або запит про доступ до публічної інформації;</li>
                     <li> -не розглядаємо звернення щодо можливого порушення земельного законодавства, незаконного використання земельних ресурсів, врегулювання земельних відносин;</li>
                     <li> -не розглядаємо звернення з приводу порушення законодавства про звернення громадян, про доступ до публічної інформації.</li>`,
-        popUpLink: '<a href=\"https://lviv.gp.gov.ua/ua/index.html\" target=\"_blank\" name="LvivPPO">Прокуратура<br> <img class=\"ppoImage\" src=\"images/PPO.jpeg\"></a>',
+        popUpLink: '<img class=\"ppoImage\" src=\"images/PPO.jpeg\"><a href=\"https://lviv.gp.gov.ua/ua/index.html\" target=\"_blank\" name="LvivPPO">Прокуратура<br></a>',
         onmouseover: this.name,
         imgSrc: "images/PPO.png",
         address: "проспект Шевченка, 17-19, Львів, Львівська область, 79000",
@@ -56,7 +56,7 @@ let institutions_Lviv_Region = [
                         <li>-       не переглядаємо судові рішення на предмет їх законності і обґрунтованості;</li>
                         <li>-         не здійснюємо охорону громадського порядку.</li>`,
 
-        popUpLink: "<a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br> <img class=\"mapImage\" src=\"images/ssu.jpeg\"></a>",
+        popUpLink: " <img class=\"mapImage\" src=\"images/ssu.jpeg\"><a href=\"https://ssu.gov.ua/contacts/upravlinnia\" target=\"_blank\">СБУ <br></a>",
         onmouseover: this.name,
         imgSrc: "images/SSU.png",
         address: "79012, м. Львів, вул. Вітовського, 55",
@@ -91,9 +91,8 @@ let institutions_Lviv_Region = [
                         <li>- не переглядаємо рішення судів, прокуратури, органів місцевого самоврядування, а також не притягуємо цих посадових осіб до дисциплінарної відповідальності;</li> 
                         <li>- не проводимо перевірки суб’єктів підприємницької діяльності;</li>
                         <li>- не надаємо довідки про відсутність (наявність) судимості.</li>`,
-        popUpLink: "<a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br> " +
-            "<img class=\"policeImage\" src=\"images/police.jpeg\">" +
-            "</a>",
+        popUpLink: "<img class=\"policeImage\" src=\"images/police.jpeg\"><a href=\"https://www.npu.gov.ua/\" target=\"_blank\">Поліція<br></a>",
+
         onmouseover: this.name,
         imgSrc: "images/police.png",
         address: "площа Генерала Григоренка, 3, Львів, Львівська область, 79000",
@@ -125,9 +124,7 @@ let institutions_Lviv_Region = [
                         <li>- не здійснюємо досудове розслідування та не притягуємо до кримінальної відповідальності винних осіб;</li>
                         <li>- не переглядаємо судові рішення;</li>
                         <li>- не переглядаємо рішення органів державної влади, органів місцевого самоврядування, не приймаємо рішень замість цих органів та не притягуємо до дисциплінарної відповідальності їх працівників.</li>`,
-        popUpLink: "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\" onmouseover=''>Обмудсман<br> " +
-            "<img class=\"ombudsmanImage\" src=\"images/ombudsman.jpeg\">" +
-            "</a>",
+        popUpLink:  "<img class=\"ombudsmanImage\" src=\"images/ombudsman.jpeg\">" + "<a href=\"http://www.ombudsman.gov.ua/ru/page/secretariat/regionalni-predstavnicztva-upovnovazhenogo/\" target=\"_blank\" onmouseover=''>Обмудсман<br> " + "</a>",
         onmouseover: this.name,
         imgSrc: "images/ombudsman.jpg",
         address: "вул. Винниченка, 18, м. Львів, 79000",

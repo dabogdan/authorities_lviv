@@ -14,11 +14,14 @@ paragraphs.forEach((e) => {
 function highlightCard (e) {
     e.children[0].children[3].children[0].style.backgroundColor = 'white';
     e.style.boxShadow = 'inset 0 0 0 2000px rgba(234,254,0, 1)';
+    // e.style.filter = 'grayscale(0%)';
 }
 
 function unhighlightCard (e) {
     e.children[0].children[3].children[0].style.backgroundColor = '#EAFE00';
-    e.style.boxShadow = 'inset 0 0 0 2000px rgba(238,238,238, 0.65)';
+    e.style.boxShadow = 'inset 0 0 0 2000px rgba(238,238,238, 0.8)';
+    // e.style.filter = 'grayscale(100%)';
+    // e.children[0].children[1].filter = 'grayscale(0%)';
 }
 
 for (let i = 0; i < paragraphs.length; i++) {
