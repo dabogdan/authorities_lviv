@@ -1,4 +1,7 @@
-let paragraphs = document.querySelectorAll('.paragraph');
+const paragraphs = document.querySelectorAll('.paragraph');
+const aboutBtn = document.querySelector('.about-link');
+const aboutSection = document.querySelector('#about');
+const header = document.querySelector('.header');
 
 //change of the logo border color to red on the cards when hover over them
 //add events to the button when card is highlighted
@@ -26,4 +29,18 @@ function unhighlightCard (e) {
 
 for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].style.backgroundImage = institutions_Lviv_Region[i].photo;
+}
+
+// about link
+aboutBtn.addEventListener('click', () => {
+    aboutSection.style.display = 'block';
+})
+
+
+//smooth-scroll with the offset of the header size
+if (screen.width > 480) {
+    const scroll = new SmoothScroll('a[href*="#"]', {offset: header.offsetHeight - 50});
+}
+if (screen.width <= 480) {
+    const scroll = new SmoothScroll('a[href*="#"]', {offset: nav.offsetHeight-80});
 }

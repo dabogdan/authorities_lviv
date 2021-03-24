@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="burger/overlay.css">
     <link rel="stylesheet" href="burger/burger.css">
+    <link rel="stylesheet" href="css/simplebar.css">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,12 +27,12 @@
     <div class="nav grid">
         <!--  logo -->
         <div class="logo">
-            <p>We will help you</p>
+            <a href="#">We will help you</a>
         </div>
         <div class="menu">
-                <a href="#">search</a>
-                <a href="#">about</a>
-                <a href="#">support</a>
+            <a href="#">search</a>
+            <a href="#about" class="about-link">about</a>
+            <a href="#support">support</a>
         </div>
 
         <!-- dropdown -->
@@ -76,8 +77,8 @@
         </div>
         <!--    language switcher-->
         <div class="lang-menu">
-                <a href="/ua">УКР</a>
-                <a href="/en" class="active">ENG</a>
+            <a href="/ua" style="color: #6B6969">УКР</a>
+            <a href="/en" class="active">ENG</a>
         </div>
     </div>
 </div><!--./header-->
@@ -102,18 +103,92 @@
             <input type="search" placeholder="search by name of institution" id="search-institution" size="1">
         </div>
         <!--  cards -->
-        <div class="cards">
+        <div class="cards" data-simplebar data-simplebar-auto-hide="false" id="cards">
             <div class="description grid">
-<!--                here all the JS code creates cards-->
+                <!--                here all the JS code creates cards-->
             </div>
         </div>
     </section>
+    <section class="about" style="display: none;" id="about">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam consequatur cumque doloremque hic in
+        laborum magni necessitatibus nostrum odit. Dolores earum incidunt ipsum maxime nobis non provident quia unde!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur debitis, deleniti dolore doloremque
+        doloribus enim, explicabo ipsum iure laborum libero, optio porro quaerat quos sed sit ullam velit voluptate!</p>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam beatae distinctio eius enim
+            libero maxime minima nam necessitatibus, nostrum pariatur porro quas rerum suscipit unde. Doloremque ipsa
+            velit veniam!
+        </div>
+        <div>Cum enim harum recusandae repellendus saepe, temporibus totam. Ab aliquid amet architecto, at culpa
+            deleniti et facere fugiat, illo maxime minus natus necessitatibus non perspiciatis tenetur velit vero vitae
+            voluptas!
+        </div>
+        <div>A assumenda at atque beatae consequatur consequuntur distinctio earum eos esse explicabo iste maiores minus
+            molestiae necessitatibus nesciunt officiis optio possimus, quia quis repudiandae soluta vel vero? Eos,
+            illum, ratione.
+        </div>
+        <div>Alias asperiores, consectetur cupiditate eaque enim, et excepturi illo ipsum laudantium maiores natus omnis
+            porro quod quos vero! Dignissimos distinctio dolorum exercitationem harum libero modi molestias natus
+            placeat quam suscipit.
+        </div>
+        <div>Commodi consequuntur cumque delectus dicta dolore est exercitationem, labore libero magni maxime
+            necessitatibus nihil nisi perspiciatis quaerat, quis rem rerum sequi sit soluta ut, vel velit veritatis
+            voluptate? Consequatur, voluptatum!
+        </div>
+        <div>Aliquam amet architecto asperiores consequatur debitis dolor dolores eaque earum est et in inventore
+            laudantium minima modi nobis nulla quaerat quas quasi, quidem quisquam recusandae reprehenderit saepe sunt
+            vitae voluptatibus!
+        </div>
+        <div>Ad alias animi assumenda at autem consectetur debitis dolore doloribus eaque impedit magni nulla odio odit
+            omnis pariatur quaerat quasi quo recusandae repellat rerum tenetur totam, ullam ut voluptas voluptatibus!
+        </div>
+        <div>Accusamus adipisci autem deserunt dolor dolore doloribus eligendi id illum laborum mollitia odit omnis
+            porro, praesentium provident quasi, quo quos rem repudiandae sapiente similique sunt velit veniam vero vitae
+            voluptates?
+        </div>
+        <div>Ab accusantium ad aliquam doloremque error et expedita, facilis fuga id impedit ipsa iure obcaecati quo
+            ratione repellat unde veritatis? Aliquam aspernatur delectus deleniti molestias obcaecati quas soluta
+            tempora, voluptas?
+        </div>
+        <div>A blanditiis debitis deserunt excepturi facilis illum rem repellendus unde? Asperiores eius itaque
+            necessitatibus nemo odio porro provident quam quia, quos rem repudiandae suscipit tempora tempore temporibus
+            vel voluptas voluptates.
+        </div>
+        <div>Adipisci alias at culpa enim expedita facere harum illo illum itaque, magnam maxime nemo nisi non nostrum
+            numquam odit placeat, possimus rem, saepe sint sit tempore temporibus vero vitae voluptates!
+        </div>
+        <div>Aliquam mollitia nemo omnis quas voluptate! Aut excepturi natus obcaecati quo repellat! Assumenda
+            cupiditate delectus dicta laboriosam necessitatibus temporibus, voluptatum? Aut cupiditate delectus fugit
+            harum incidunt laborum magni nostrum, quia.
+        </div>
+
+    </section>
+    <section class="support" id="support">
+        <h2>Technical support</h2>
+        <h5>If there are technical problems when using the resource <br>
+            let us know by filling out the form below</h5>
+
+    </section>
+    <footer class="footer grid">
+        <h2>We will help you</h2>
+        <div class="footer-menu">
+            <a href="#">search</a>
+            <a href="#about" class="about-footer">about</a>
+            <a href="#support">support</a>
+        </div>
+        <div class="footer-social">
+            <img src="http://placehold.it" alt="">
+            <img src="http://placehold.it" alt="">
+            <img src="http://placehold.it" alt="">
+        </div>
+        <a class="copyright">Developed by EUAM Ukraine &copy;</a>
+    </footer>
 </div>
 
 
 <!-- map script -->
 
-
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/simplebar.min.js"></script>
 <script src="js/leaflet.js"></script>
 <script src="js/state.js"></script>
 <script src="js/cards.js"></script>

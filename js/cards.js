@@ -71,8 +71,6 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     btnOpenDescription.classList.add("btn");
     btnOpenDescription.classList.add("open-description");
     btnOpenDescription.setAttribute('onclick', 'onClick(this);');
-    // btnOpenDescription.setAttribute('onmouseover', 'this.style.backgroundColor = "black"');
-    // btnOpenDescription.setAttribute('onmouseout', 'this.style.backgroundColor = "white"');
     btnOpenDescription.setAttribute('obj', institutions_Lviv_Region[i].name);
     btnOpenDescription.setAttribute('target', 'blank');
     btnOpenDescription.innerHTML = "about";
