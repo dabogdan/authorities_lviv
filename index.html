@@ -32,7 +32,7 @@
         <div class="menu">
             <a href="#">search</a>
             <a href="#about" class="about-link">about</a>
-            <a href="#support">support</a>
+            <a href="#support" class="support-link">support</a>
         </div>
 
         <!-- dropdown -->
@@ -100,7 +100,7 @@
         </div>
         <!-- search-->
         <div class="search">
-            <input type="search" placeholder="search by name of institution" id="search-institution" size="1">
+            <input type="search" placeholder="search by name of institution" id="search-institution" size="1" class="input">
         </div>
         <!--  cards -->
         <div class="cards" data-simplebar data-simplebar-auto-hide="false" id="cards">
@@ -110,6 +110,7 @@
         </div>
     </section>
     <section class="about" style="display: none;" id="about">
+        <h2>About the Project</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam consequatur cumque doloremque hic in
         laborum magni necessitatibus nostrum odit. Dolores earum incidunt ipsum maxime nobis non provident quia unde!
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur debitis, deleniti dolore doloremque
@@ -134,51 +135,29 @@
             necessitatibus nihil nisi perspiciatis quaerat, quis rem rerum sequi sit soluta ut, vel velit veritatis
             voluptate? Consequatur, voluptatum!
         </div>
-        <div>Aliquam amet architecto asperiores consequatur debitis dolor dolores eaque earum est et in inventore
-            laudantium minima modi nobis nulla quaerat quas quasi, quidem quisquam recusandae reprehenderit saepe sunt
-            vitae voluptatibus!
-        </div>
-        <div>Ad alias animi assumenda at autem consectetur debitis dolore doloribus eaque impedit magni nulla odio odit
-            omnis pariatur quaerat quasi quo recusandae repellat rerum tenetur totam, ullam ut voluptas voluptatibus!
-        </div>
-        <div>Accusamus adipisci autem deserunt dolor dolore doloribus eligendi id illum laborum mollitia odit omnis
-            porro, praesentium provident quasi, quo quos rem repudiandae sapiente similique sunt velit veniam vero vitae
-            voluptates?
-        </div>
-        <div>Ab accusantium ad aliquam doloremque error et expedita, facilis fuga id impedit ipsa iure obcaecati quo
-            ratione repellat unde veritatis? Aliquam aspernatur delectus deleniti molestias obcaecati quas soluta
-            tempora, voluptas?
-        </div>
-        <div>A blanditiis debitis deserunt excepturi facilis illum rem repellendus unde? Asperiores eius itaque
-            necessitatibus nemo odio porro provident quam quia, quos rem repudiandae suscipit tempora tempore temporibus
-            vel voluptas voluptates.
-        </div>
-        <div>Adipisci alias at culpa enim expedita facere harum illo illum itaque, magnam maxime nemo nisi non nostrum
-            numquam odit placeat, possimus rem, saepe sint sit tempore temporibus vero vitae voluptates!
-        </div>
-        <div>Aliquam mollitia nemo omnis quas voluptate! Aut excepturi natus obcaecati quo repellat! Assumenda
-            cupiditate delectus dicta laboriosam necessitatibus temporibus, voluptatum? Aut cupiditate delectus fugit
-            harum incidunt laborum magni nostrum, quia.
-        </div>
-
     </section>
     <section class="support" id="support">
         <h2>Technical support</h2>
-        <h5>If there are technical problems when using the resource <br>
+        <h5>If there are technical problems when using the resource <br><br>
             let us know by filling out the form below</h5>
-
+        <form action="" class="support-form grid">
+            <input type="text" placeholder="Name" required id="name" class="name input">
+            <input type="text" placeholder="E-mail" required id="email" class="email input">
+            <textarea placeholder="Message" required rows="10" cols="80" id="support-message" class="support-message input"></textarea>
+            <input type="submit" class="submit-btn">
+        </form>
     </section>
     <footer class="footer grid">
         <h2>We will help you</h2>
         <div class="footer-menu">
             <a href="#">search</a>
-            <a href="#about" class="about-footer">about</a>
-            <a href="#support">support</a>
+            <a href="#about" class="about-footer about-link">about</a>
+            <a href="#support" class="support-link">support</a>
         </div>
         <div class="footer-social">
-            <img src="http://placehold.it" alt="">
-            <img src="http://placehold.it" alt="">
-            <img src="http://placehold.it" alt="">
+<!--            <img src="https://placehold.it" alt="">-->
+<!--            <img src="https://placehold.it" alt="">-->
+<!--            <img src="https://placehold.it" alt="">-->
         </div>
         <a class="copyright">Developed by EUAM Ukraine &copy;</a>
     </footer>
