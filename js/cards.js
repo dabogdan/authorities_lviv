@@ -1,9 +1,11 @@
+const header = document.querySelector('.place-map');
+
 // creating the card elements for the cards section
 for (let i = 0; i < institutions_Lviv_Region.length; i++) {
     // create paragraphs quantity according to the array
     let tagParagraph = document.createElement("div");
     tagParagraph.classList.add("paragraph");
-    tagParagraph.setAttribute('id', 'paragraph');
+    // tagParagraph.setAttribute('id', 'paragraph');
     descriptionTag.appendChild(tagParagraph);
 
     // event listeners 'mouseenter' and 'mouseleave' of the paragraph - enabling/disabling shadow
@@ -28,10 +30,10 @@ for (let i = 0; i < institutions_Lviv_Region.length; i++) {
             unhighlightCard(paragraph[j]);
         }
         highlightCard(paragraph[i]);
+
         //scroll to the card when the marker is clicked on the map
         paragraph[i].scrollIntoView({
             behavior: 'smooth',
-            block: "center"
         })
     })
 

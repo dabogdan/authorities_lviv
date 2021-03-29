@@ -92,7 +92,6 @@ input::placeholder, textarea::placeholder{
 /* header */
 .header {
     background-color: #fff;
-    /*box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .4);*/
     border: none;
     position: fixed;
     top: 0;
@@ -229,35 +228,44 @@ input::placeholder, textarea::placeholder{
 .container {
     width: 100%;
     height: 90vh;
+    max-height: 100vh;
     margin: 0 auto;
     align-items: center;
     top: 50px;
     position: relative;
 }
 
-/*.content::-webkit-scrollbar {*/
-/*    width: 25px;               !* width of the entire scrollbar *!*/
-/*    float: left;*/
-/*}*/
+.description-popup {
+    padding: .5rem;
+    position: absolute;
+}
 
-/*.content::-webkit-scrollbar-track {*/
-/*    background: white;        !* color of the tracking area *!*/
-/*    width: 5px;*/
-/*}*/
-
-/*.content::-webkit-scrollbar-thumb {*/
-/*    background-color: #535353;    !* color of the scroll thumb *!*/
-/*    !*border-radius: 7px;       !* roundness of the scroll thumb *!*!*/
-/*    border: 3px solid #535353;  !* creates padding around scroll thumb *!*/
-/*    width: 3px;*/
-/*    background-clip: padding-box;*/
-/*    !*-webkit-border-radius: 7px;*!*/
-/*}*/
-
+.description-popup::-webkit-scrollbar {
+    visibility: hidden;
+}
 
 .description-popup ul li {
-    margin-bottom: 1rem;
+    text-decoration: none;
+    /*list-style-image: url("../images/caret-right.svg");*/
+
 }
+
+/*.description-popup ul li::before {*/
+/*    content: '   ';*/
+/*    background-image: url(../images/caret-right.svg);*/
+/*    height: 10px;*/
+/*    width: 10px;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    !*padding: 1rem;*!*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+.institution-title ul {
+    color: #EAFE00;
+}
+
 
 .content {
     grid-template-columns: 1fr 1fr;
@@ -269,8 +277,12 @@ input::placeholder, textarea::placeholder{
     padding: 2px 0 0;
     /*height: 73vh;*/
     /*overflow-y: auto;*/
-    height: 530px;
+    height: 540px;
 }
+
+
+
+
 
 /*style of the map*/
 .place-map {

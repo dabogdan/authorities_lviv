@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Citizens Information Portal</title>
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="burger/overlay.css">
     <link rel="stylesheet" href="burger/burger.css">
     <link rel="stylesheet" href="css/simplebar.css">
@@ -22,6 +22,9 @@
 </head>
 <body>
 
+<link rel="stylesheet" href="css/style.css">
+
+
 <!-- header -->
 <div class="header">
     <div class="nav grid">
@@ -30,9 +33,9 @@
             <a href="#">We will help you</a>
         </div>
         <div class="menu">
-            <a href="#">search</a>
-            <a href="#about" class="about-link">about</a>
-            <a href="#support" class="support-link">support</a>
+            <a href="#search-institution" class="search-link link">search</a>
+            <a href="#about" class="about-link link">about</a>
+            <a href="#support" class="support-link link">support</a>
         </div>
 
         <!-- dropdown -->
@@ -87,11 +90,14 @@
 
 <!-- scrolling down container - map should stick to the left -->
 <div class="container">
-    <nav id="description-popup" class="description-popup">
+    <nav id="description-popup" class="description-popup" data-simplebar>
+<!--        data-simplebar-->
         <img src="burger/close-button.svg" alt="menu" class="close-button" id="close-btn">
-        <ul id="institution-title">
-        </ul>
-        <ul id="institution-text"></ul>
+        <div class="inside-popup" >
+<!--        created dinamically => -->
+<!--        <ul id="institution-title"></ul>-->
+<!--        <ul id="institution-text"></ul>-->
+        </div>
     </nav>
     <section class="content grid">
         <div class="place-map">
@@ -100,7 +106,7 @@
         </div>
         <!-- search-->
         <div class="search">
-            <input type="search" placeholder="search by name of institution" id="search-institution" size="1" class="input">
+            <input type="search" placeholder="search by name of institution" id="search-institution" size="1" class="search-area input">
         </div>
         <!--  cards -->
         <div class="cards" data-simplebar data-simplebar-auto-hide="false" id="cards">
@@ -150,9 +156,9 @@
     <footer class="footer grid">
         <h2>We will help you</h2>
         <div class="footer-menu">
-            <a href="#">search</a>
-            <a href="#about" class="about-footer about-link">about</a>
-            <a href="#support" class="support-link">support</a>
+            <a href="#search-institution" class="search-link link">search</a>
+            <a href="#about" class="about-footer about-link link">about</a>
+            <a href="#support" class="support-link link">support</a>
         </div>
         <div class="footer-social">
 <!--            <img src="https://placehold.it" alt="">-->
@@ -168,12 +174,13 @@
 
 <script src="js/smooth-scroll.min.js"></script>
 <script src="js/simplebar.min.js"></script>
+<!--<script src="js/isolated-scroll.js"></script>-->
 <script src="js/leaflet.js"></script>
-<script src="js/state.js"></script>
+<script src="js/state-en.js"></script>
 <script src="js/cards.js"></script>
-<!--<script src="js/map.js"></script>-->
 <script src="js/eventHandlers.js"></script>
 <script src="js/search.js"></script>
 <script src="js/overlay.js"></script>
+
 </body>
 </html>

@@ -659,7 +659,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /*size of pictures on map popups*/
 
-.ppoImage, .mapImage, .policeImage, .ombudsmanImage {
+.ppoImage, .mapImage, .policeImage, .ombudsmanImage, .SBIImage, .FLACImage {
 	width: 100px;
 	height: 90px;
 	align-items: center;
