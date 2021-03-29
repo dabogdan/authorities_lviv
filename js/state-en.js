@@ -180,8 +180,8 @@ let institutions_Lviv_Region = [
             "write the necessary complaints;",
             "find the necessary information placed in the registers of the Ministry of Justice of Ukraine;",
             "We provide a 24/7 free lawyer for detainees.",
-            "In some cases, we provide a free lawyer or a lawyer of the local center:" + "<br>" +
-            "To solve the problem in court."
+            "In some cases, we provide a free lawyer or a lawyer of the local center:" +
+            " solve the problem in court."
         ],
         weDont: [
             "we do not provide a free lawyer or a lawyer of the local center for everyone, but only for the most vulnerable, such as low-income persons, pensioners with the lowest pension, anti-terrorist operation participants, internally displaced persons, refugees, rehabilitated and others;",
