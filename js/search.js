@@ -15,9 +15,22 @@ searchUsers.addEventListener('keyup', function() {
         }
     });
 
+    // institutions_Lviv_Region.forEach((e, i) => {
+    //     e.weDo.forEach((el) => {
+    //         let searchedIn = el.toLowerCase();
+    //         if (searchedIn.indexOf(searchVal) > -1) {
+    //             paragraph[i].style['display'] = 'block';
+    //         }
+    //     });
+    //     e.weDont.forEach((el) => {
+    //         let searchedIn = el.toLowerCase();
+    //         if ( searchedIn.indexOf(searchVal) > -1) {
+    //             paragraph[i].style['display'] = 'block';
+    //         }
+    //     });
+    // })
     institutions_Lviv_Region.forEach((e, i) => {
         e.weDo.forEach((el) => {
-            console.log(el.toLowerCase().indexOf("1"))
             let searchedIn = el.toLowerCase();
             if (searchedIn.indexOf(searchVal) > -1) {
                 paragraph[i].style['display'] = 'block';
@@ -30,4 +43,6 @@ searchUsers.addEventListener('keyup', function() {
             }
         });
     })
+
+
 })
