@@ -189,7 +189,7 @@ let institutions_Lviv_Region = [
             "do not administer justice;",
             "do not prosecute."
         ],
-        popUpLink: "<img class=\"FLACImage\" src=\"images/flac.webp\">" + "<a href=\"https://www.legalaid.gov.ua/tsentry/lvivskyj-mistsevyj-tsentr-z-nadannya-bezoplatnoyi-vtorynnoyi-pravovoyi-dopomogy\" target=\"_blank\" onmouseover=''>SBI<br> " + "</a>",
+        popUpLink: "<img class=\"FLACImage\" src=\"images/flac.webp\">" + "<a href=\"https://www.legalaid.gov.ua/tsentry/lvivskyj-mistsevyj-tsentr-z-nadannya-bezoplatnoyi-vtorynnoyi-pravovoyi-dopomogy\" target=\"_blank\" onmouseover=''>FLAC<br> " + "</a>",
         onmouseover: this.name,
         imgSrc: "images/flac.svg",
         address: "Vynnychenka Str, 30, Lviv, Lviv Region, 79008",

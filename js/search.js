@@ -1,18 +1,33 @@
 let searchUsers = document.querySelector('#search-institution'),
-    titles = document.querySelectorAll('.title'),
     address = document.querySelectorAll('.address'),
     searchVal,
     paragraph = document.querySelectorAll('.paragraph');
 
-searchUsers.addEventListener('keydown', function() {
-    searchVal = this.value.toLowerCase();
-
-    for (let i = 0; i < paragraph.length; i++) {
-        if (!searchVal || paragraph[i].textContent.toLowerCase().indexOf(searchVal) > -1) {
+searchUsers.addEventListener('keyup', function() {
+    searchVal = searchUsers.value.toLowerCase();
+    institutions_Lviv_Region.forEach((e, i) => {
+        if (!searchVal || e.title.toLowerCase().indexOf(searchVal) > -1) {
             paragraph[i].style['display'] = 'block';
-        }
-        else {
+        } else if (!searchVal || e.address.toLowerCase().indexOf(searchVal) > -1) {
+        paragraph[i].style['display'] = 'block';
+        } else {
             paragraph[i].style['display'] = 'none';
         }
-    }
-});
+    });
+
+    institutions_Lviv_Region.forEach((e, i) => {
+        e.weDo.forEach((el) => {
+            console.log(el.toLowerCase().indexOf("1"))
+            let searchedIn = el.toLowerCase();
+            if (searchedIn.indexOf(searchVal) > -1) {
+                paragraph[i].style['display'] = 'block';
+            }
+        });
+        e.weDont.forEach((el) => {
+            let searchedIn = el.toLowerCase();
+            if ( searchedIn.indexOf(searchVal) > -1) {
+                paragraph[i].style['display'] = 'block';
+            }
+        });
+    })
+})

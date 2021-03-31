@@ -1,4 +1,5 @@
 const header = document.querySelector('.place-map');
+paragraph = document.querySelectorAll('.paragraph');
 
 // creating the card elements for the cards section
 for (let i = 0; i < institutions_Lviv_Region.length; i++) {
