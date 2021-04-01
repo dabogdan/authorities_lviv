@@ -72,6 +72,10 @@ input::placeholder, textarea::placeholder{
     font-size: 1rem;
 }
 
+section {
+    padding: 2rem;
+}
+
 .display-block {
     display: block;
 }
