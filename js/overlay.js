@@ -1,10 +1,9 @@
 const descriptionPopup = document.getElementById('description-popup');
 const innerPopup = document.querySelector('.inside-popup');
-// const institutionText = document.getElementById('institution-text');
-// const institutionTitle = document.getElementById('institution-title');
 const regionsPopup = document.getElementById('regions-popup');
 const openDescription = document.getElementsByClassName('open-description');
-// const
+const cards = document.getElementById('cards');
+const simplebarContentWrapper = document.querySelectorAll('.simplebar-content-wrapper')
 
 // insert the institution data and title into ".description-popup"
 const onClick = (element) => {
@@ -37,9 +36,9 @@ const onClick = (element) => {
     innerPopup.appendChild(institutionText);
 
     let weDoUlTag = document.createElement('p');
-    if (language == "ukr") {
+    if (language === "ukr") {
         weDoUlTag.textContent = 'Що ми робимо:';
-    } else if (language == "eng") {
+    } else if (language === "eng") {
         weDoUlTag.textContent = 'What we do:';
     }
     weDoUlTag.style.color = '#EAFE00';
@@ -90,11 +89,6 @@ const onClick = (element) => {
         p.style.display = 'inline';
         node.appendChild(p);
     })
-
-
-    //changing the innerHTML of the .half-overlay
-    // institutionTitle.innerText = foundName.title;
-    // institutionText.innerText = foundName.description;
 }
 
 
@@ -112,8 +106,15 @@ document.getElementById('close-btn').addEventListener('click', () => {
 
 //eventListeners to open and and close full-overlay with regions choice
 document.querySelector('.dropdown').addEventListener('click', () => {
+    simplebarContentWrapper.forEach((e) => {
+        e.style.overflow = 'hidden'
+    })
     regionsPopup.classList.add('full-overlay');
 });
+
 document.getElementById('close-btn-regions').addEventListener('click', () => {
     regionsPopup.classList.remove('full-overlay');
+    simplebarContentWrapper.forEach((e) => {
+        e.style.overflow = 'hidden scroll'
+    })
 });

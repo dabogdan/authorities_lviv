@@ -9,6 +9,8 @@ const footerSection = document.querySelector('.footer')
 const links = [aboutLink, supportLink];
 const anchors = [aboutSection, supportSection];
 
+const searchLinks = document.querySelectorAll('.search-link');
+
 // const searchField = document.querySelector('.search-area');
 // const searchLink = document.querySelector('search');
 
@@ -58,6 +60,14 @@ inputs.forEach((e) => {
     })
 })
 
+
+//    focus on search when click on search-link
+searchLinks.forEach((e) => {
+    e.addEventListener('click', () => {
+        searchUsers.focus();
+    })
+})
+
 //smooth-scroll with the offset of the header size
 const scroll = new SmoothScroll('.link[href*="#"]', {
     header: '.header'
@@ -82,3 +92,5 @@ institutions_Lviv_Region.forEach((e) => {
 //
 // // Remove isolated scroll behaviour:
 // unbindHandlers();
+
+let simpleBarDistricts = new SimpleBar(document.getElementById('cards'));
