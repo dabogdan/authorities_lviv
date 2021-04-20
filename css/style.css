@@ -73,7 +73,7 @@ input::placeholder, textarea::placeholder{
 }
 
 section {
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .display-block {
@@ -528,6 +528,8 @@ input::-webkit-textfield-decoration-container {
 }
 .about p, .about div {
     margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 16px;
 }
 
 .support{
